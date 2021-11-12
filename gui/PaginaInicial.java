@@ -7,6 +7,7 @@ import javax.swing.JScrollPane;
 import javax.swing.border.EmptyBorder;
 
 import java.awt.*;
+import java.awt.event.*;
 
 public class PaginaInicial extends JFrame{
 
@@ -18,6 +19,7 @@ public class PaginaInicial extends JFrame{
         super("Coleta seletiva de lixo");
 
         btnSubcoleta = new JButton("Registrar uma subcoleta");
+        btnSubcoleta.addActionListener(new EventoRegSubcoleta());
         btnRelatorio = new JButton("Relatório");
         btnCadastrar = new JButton("Cadastrar");
 
@@ -33,5 +35,15 @@ public class PaginaInicial extends JFrame{
         setLocation(600, 300);
         pack();
         setVisible(true);
+    }
+
+    public class EventoRegSubcoleta implements ActionListener {
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            
+            RegSubcoleta JanelaRegistrar = new RegSubcoleta();
+        }
+
     }
 }
