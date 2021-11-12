@@ -23,6 +23,7 @@ public class PaginaInicial extends JFrame{
         btnRelatorio = new JButton("Relatório");
         btnRelatorio.addActionListener(new EventoRelatorio());
         btnCadastrar = new JButton("Cadastrar");
+        btnCadastrar.addActionListener(new EventoCadastroMaterial());
 
         JPanel jPanel = new JPanel(new BorderLayout(10, 10));
         jPanel.setBorder(new EmptyBorder(10, 30, 10, 30));
@@ -56,5 +57,13 @@ public class PaginaInicial extends JFrame{
             
         }
         
+    }
+
+    public class EventoCadastroMaterial implements ActionListener{
+
+        @Override
+        public void actionPerformed(ActionEvent arg0) {
+            CadastroMaterial cadastroMaterial = new CadastroMaterial();    
+        }
     }
 }
