@@ -21,6 +21,7 @@ public class PaginaInicial extends JFrame{
         btnSubcoleta = new JButton("Registrar uma subcoleta");
         btnSubcoleta.addActionListener(new EventoRegSubcoleta());
         btnRelatorio = new JButton("Relatório");
+        btnRelatorio.addActionListener(new EventoRelatorio());
         btnCadastrar = new JButton("Cadastrar");
 
         JPanel jPanel = new JPanel(new BorderLayout(10, 10));
@@ -45,5 +46,15 @@ public class PaginaInicial extends JFrame{
             RegSubcoleta JanelaRegistrar = new RegSubcoleta();
         }
 
+    }
+
+    public class EventoRelatorio implements ActionListener{
+
+        @Override
+        public void actionPerformed(ActionEvent arg0) {
+            Relatorio relatorio = new Relatorio();
+            
+        }
+        
     }
 }
