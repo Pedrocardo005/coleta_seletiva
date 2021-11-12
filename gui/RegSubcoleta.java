@@ -23,6 +23,7 @@ public class RegSubcoleta extends JFrame{
     private JLabel labelCubagem;
     private JSpinner numCubagem;
     private JButton registrar;
+    private JButton voltar;
     
     public RegSubcoleta() {
         super("Registrar uma subcoleta");
@@ -40,6 +41,7 @@ public class RegSubcoleta extends JFrame{
         numCubagem = new JSpinner();
         
         registrar = new JButton("Registrar");
+        voltar = new JButton("Voltar");
 
         JPanel panel = (JPanel) getContentPane();
         panel.setLayout(new GridBagLayout());
@@ -71,9 +73,14 @@ public class RegSubcoleta extends JFrame{
         constraints.gridy=2; // linha 2
         panel.add(numCubagem, constraints);
 
-        constraints.gridx=0; // coluna 0
+        constraints.gridx=0;
+        constraints.gridy=4;
+        constraints.gridwidth=1;
+        panel.add(voltar, constraints);
+
+        constraints.gridx=1; // coluna 0
         constraints.gridy=4; // linha 4
-        constraints.gridwidth=2; // ocupa 2 colunas
+        constraints.gridwidth=1; // ocupa 2 colunas
         panel.add(registrar, constraints);
 
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
