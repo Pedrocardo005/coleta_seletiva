@@ -1,6 +1,7 @@
 package gui;
 
 import java.awt.*;
+import java.awt.event.*;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
 
@@ -13,6 +14,7 @@ import javax.swing.JPanel;
 import javax.swing.JSpinner;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
+import javax.swing.event.AncestorEvent;
 
 public class RegSubcoleta extends JFrame{
 
@@ -42,6 +44,7 @@ public class RegSubcoleta extends JFrame{
         
         registrar = new JButton("Registrar");
         voltar = new JButton("Voltar");
+        voltar.addActionListener(new EventoVoltar());
 
         JPanel panel = (JPanel) getContentPane();
         panel.setLayout(new GridBagLayout());
@@ -88,5 +91,13 @@ public class RegSubcoleta extends JFrame{
         setLocation(600,300);
         pack(); // define o tamanho da janela (menor possível para caber o conteúdo)
         setVisible(true);
+    }
+
+    private class EventoVoltar implements ActionListener{
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            dispose();
+        }
     }
 }
