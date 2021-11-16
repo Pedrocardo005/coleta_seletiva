@@ -27,8 +27,8 @@ public class CadastroMaterial extends JFrame{
         super("Cadastrar um material");
 
         labelTipo = new JLabel("Tipo: ");
-        String [] tipos = {"Vidro", "Plástico", "Papel",
-                            "Papelão", "Metal", "Madeira", "Orgânicos"};
+        String [] tipos = {"Materia Organica", "Texteis", "Metal", "Vidro", "Plastico", "Papel e Papelao", 
+        "Embalagens", "Multicamadas", "Rejeitos", "Outros"};
         
         caixaTipo = new JComboBox<String>(tipos);
 
