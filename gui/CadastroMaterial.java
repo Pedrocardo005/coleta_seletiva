@@ -33,9 +33,9 @@ public class CadastroMaterial extends JFrame{
         caixaTipo = new JComboBox<String>(tipos);
 
         labelPeso = new JLabel("Peso: ");
-        numPeso = new JSpinner();
+        numPeso = new JSpinner(new SpinnerNumberModel(Long.valueOf(0), Long.valueOf(0), null, Long.valueOf(1)));
         labelCubagem = new JLabel("Cubagem: ");
-        numCubagem = new JSpinner();
+        numCubagem = new JSpinner(new SpinnerNumberModel(Long.valueOf(0), Long.valueOf(0), null, Long.valueOf(1)));;
 
         armazenar = new JButton("Armazenar");
         armazenar.addActionListener(new EventoSalvar());

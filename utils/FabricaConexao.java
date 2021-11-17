@@ -6,8 +6,8 @@ import java.sql.SQLException;
 public class FabricaConexao {
     /* Atributos ---------------------------------- */
     private static Connection conexao = null;
-    private static final String DATABASE_NAME = "DATABASE_NAME";
-    private static final String URL_CONNECTION = "jdbc:mysql://localhost/"+DATABASE_NAME+"?useTimezone=true&serverTimezone=UTC&autoReconnect=true&useSSL=false";
+    private static final String DATABASE_NAME = "NOME_DO_SCHEMA";
+    private static final String URL_CONNECTION = "jdbc:mysql://localhost/"+NOME_DO_SCHEMA+"?useTimezone=true&serverTimezone=UTC&autoReconnect=true&useSSL=false";
     private static final String USER = "USER";
     private static final String PASSWORD = "PASSWORD";
 

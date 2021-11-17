@@ -13,6 +13,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JSpinner;
 import javax.swing.JTextField;
+import javax.swing.SpinnerNumberModel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.event.AncestorEvent;
 
@@ -38,9 +39,9 @@ public class RegSubcoleta extends JFrame{
         caixaTipo = new JComboBox<String>(tipos);
                             
         labelPeso = new JLabel("Peso: ");
-        numPeso = new JSpinner();
+        numPeso = new JSpinner(new SpinnerNumberModel(Long.valueOf(0), Long.valueOf(0), null, Long.valueOf(1)));
         labelCubagem = new JLabel("Cubagem: ");
-        numCubagem = new JSpinner();
+        numCubagem = new JSpinner(new SpinnerNumberModel(Long.valueOf(0), Long.valueOf(0), null, Long.valueOf(1)));
         
         registrar = new JButton("Registrar");
         voltar = new JButton("Voltar");
