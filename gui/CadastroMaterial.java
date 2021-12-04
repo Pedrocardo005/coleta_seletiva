@@ -102,7 +102,7 @@ public class CadastroMaterial extends JFrame{
             PreparedStatement ps = conexao.prepareStatement("INSERT INTO material(material) VALUES('" +objetoJson.toJSONString()+ "')");
             ps.execute(); // executar o sql no banco de dados
             JOptionPane.showMessageDialog(this, "Material cadastrado com sucesso!", "Inserção no Banco",JOptionPane.INFORMATION_MESSAGE);
-            dispose(); // fechar esta janela de Cadastro
+            // dispose(); // fechar esta janela de Cadastro
         }catch(SQLException e){
             e.printStackTrace();
             JOptionPane.showMessageDialog(this, "Erro ao cadastrar material no banco!", "Inserção no Banco",JOptionPane.INFORMATION_MESSAGE);

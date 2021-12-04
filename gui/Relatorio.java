@@ -23,7 +23,6 @@ import utils.FabricaConexao;
 
 public class Relatorio extends JFrame{
 
-    private JButton btnGerarPdf;
     private JButton btnTelaInicial;
     private JTable tableMateriais;
     private ArrayList<Material> listaMateriais;
@@ -33,7 +32,6 @@ public class Relatorio extends JFrame{
     public Relatorio() {
         super("Relatório");
 
-        btnGerarPdf = new JButton("Gerar PDF");
         btnTelaInicial = new JButton("Tela inicial");
         btnTelaInicial.addActionListener(new EventoTelaInicial());
 
@@ -49,7 +47,6 @@ public class Relatorio extends JFrame{
         panel.setBorder(new EmptyBorder(10, 10, 10, 10));
         panel.add(new JScrollPane(tableMateriais), BorderLayout.NORTH);
         panel.add(btnTelaInicial, BorderLayout.LINE_START);
-        panel.add(btnGerarPdf, BorderLayout.LINE_END);
         add(panel);
 
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
